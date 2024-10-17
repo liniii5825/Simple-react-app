@@ -1,5 +1,4 @@
 import Product from "../models/product.model.js";
-import mongoose from "mongoose";
 
 export const getProducts = async (req, res) => {
   try {
@@ -11,7 +10,7 @@ export const getProducts = async (req, res) => {
   }
 };
 
-export const postProduct = async (req, res) => {
+export const createProduct = async (req, res) => {
   const product = req.body;
 
   if (!product.name || !product.price || !product.image) {
